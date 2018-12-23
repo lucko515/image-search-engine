@@ -1,0 +1,39 @@
+<!-- 
+    Home page for image to image search demo.
+ -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Upload</title>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+         <!-- Include bootstrap library -->
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <body>
+            <!-- Setup simple upload form  -->
+            <form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data" style="margin-top: 10%;">
+                <div class='container form-group'>
+                <input id="file-uploader" type="file" name="file" accept="image/*">
+                <input type="submit" value="Upload an image" id="upload-button">
+                </div>
+            </form>
+    </body>
+
+    <script>
+
+        $("#file-uploader").change(function(){
+            var file = document.getElementById('file-uploader');
+
+            var extension =  input.files[0].name.substring(input.files[0].name.lastIndexOf('.')+1).toLowerCase()
+
+            if ((extension == 'jpg') || (extension == 'png') || (extension == 'jpeg')){
+                //Do something fun
+            }
+            else{
+                //if user has uploaded wrong format restart file uploader value
+                document.getElementById("file-uploader").value ="";
+            }
+        } );
+    </script>
+</html>
