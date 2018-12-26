@@ -56,6 +56,23 @@ We could use color intesity to produce additional features and improve our image
 
 The Flask approach works, but it is not scalable. If you want to create the system more scalable you will need to change the implementation to TensorFlow Serving.
 
+The updated version of files are in the [folder](https://github.com/lucko515/image-search-engine/tree/master/tensorflow-serving-update).
+
+How to server the model using the TensorFlow serving: [tutorial](https://medium.com/epigramai/tensorflow-serving-101-pt-1-a79726f7c103)
+
+```
+	1. Put folder `models` inside the root dir
+	2. replace all files in the root to make this project use TensorFlow Serving
+```
+
+NOTE: 
+
+If you have the following error:
+
+__Check whether your GraphDef-interpreting binary is up to date with your GraphDef-generating binary.__
+
+The potential solution is to downgrade your TensorFlow version to 1.4.0. 
+
 #### (3) Use Hourglass attention mechanism
 
 #### (4) Use pre-trained model
