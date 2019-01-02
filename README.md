@@ -2,6 +2,8 @@
 
 This is the end-to-end implementation of image search engine. The image search engines allow us to retrive similar images based on the query one.
 
+![](helper_images/img_search_demo.gif)
+
 ## Project Instructions
 
 ### Getting Started
